@@ -29,13 +29,11 @@ function startTimer() {
   $(".play").toggle();
   timeleft = 59;
   $(".circle").toggleClass("anim");
-  $(".finish").toggleClass("anim");
   downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
       clearInterval(downloadTimer);
       document.getElementById("countdown").innerHTML = "60";
       $(".circle").toggleClass("anim");
-      $(".finish").toggleClass("anim");
     } else {
       document.getElementById("countdown").innerHTML = timeleft;
     }
@@ -47,11 +45,11 @@ function stopTimer() {
   $(".replay").toggle();
   $(".play").toggle();
   $(".circle").toggleClass("anim");
-  $(".finish").toggleClass("anim");
   clearInterval(downloadTimer);
   document.getElementById("countdown").innerHTML = 60;
   timeleft = 59;
 }
+
 
 </script>
 </body>
